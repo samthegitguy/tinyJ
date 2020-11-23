@@ -10,13 +10,14 @@ function $(element) {
     return new Element(element)
 }
 $.ajax = function(url) {
-    let response
-    window.fetch(url).then((res, err) => {
-        if (err) {
-            console.error(err);
+    return new Promise((resolve, reject) => {
+        new XMLHttpRequest().onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                resolve(this.responseText)
+            } else {
+                reject(new Error("Not 200"))
+            }
         }
-        response = res
     })
-    return response
 }
 console.log("hi")
