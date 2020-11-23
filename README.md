@@ -30,9 +30,14 @@ As of `0.1.0` only a small subset of CSS selectors are supported:
 * `.classname`
 * `tagname`
 
-You can also use `$.ajax` very simply: (maybe we should use callbacks)
+You can also use `$.ajax` very simply:
 
-```javascript
-console.log($.ajax('google.com'))
+```html
+<script src="https://unpkg.com/tinyJ/tinyJ.js"> </script>
+<script>
+$.ajax("url here").then(function(res, err) {
+    // Do something with the response
+})
+</script>
 ```
 See the changelog for more information.
