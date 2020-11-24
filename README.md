@@ -3,7 +3,7 @@
 
 TinyJ - a short, succinct DOM interactions library inspired by Jquery. 
 
-It doesn't have all the features that Jquery has and certainly no plugins, but minified and zipped it comes down to (TODO: update minified data) and it has the core features that JQuery has. You'll also find that a lot of the syntax is quite similar.
+It doesn't have all the features that Jquery has and certainly no plugins, but minified and zipped it comes down to (TODO: update minified data) and it has the core features that JQuery has. You'll also find that a lot of the syntax is quite similar - however, you should look through the readme just to be sure.
 
 ## Usage
 In plain HTML

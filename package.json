@@ -11,6 +11,7 @@
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
   "main": "tinyJ.js",
   "scripts": {
+    "prepare": "npx jsdoc tinyJ.js -d docs -R README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,5 +21,8 @@
     "react"
   ],
   "author": "samthegitguy",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^3.6.6"
+  }
 }
