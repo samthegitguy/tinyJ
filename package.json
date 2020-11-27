@@ -12,7 +12,8 @@
     }
   },
   "bugs": "https://github.com/samthegitguy/tinyJ/issues",
-  "homepage": "https://github.com/samthegitguy/tinyj#readme",
+  "homepage": "https://samthegitguy.github.io/tinyJ",
+  "docs": "https://samthegitguy.github.io/tinyJ",
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
   "main": "src/tinyJ.js",
   "scripts": {
