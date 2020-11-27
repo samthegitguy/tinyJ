@@ -1,6 +1,7 @@
 {
   "name": "tinyj",
   "version": "0.1.1",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "github:samthegitguy/tinyJ"

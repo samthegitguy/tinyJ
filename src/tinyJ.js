@@ -1,4 +1,7 @@
 class Element {
+    /** documentation test
+     * 
+     */
     constructor(element) {
         this.element = element
     }
