@@ -13,9 +13,9 @@
   "bugs": "https://github.com/samthegitguy/tinyJ/issues",
   "homepage": "https://github.com/samthegitguy/tinyj#readme",
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
-  "main": "src/tinyJ.js",
+  "main": "src/tinyJ.mjs",
   "scripts": {
-    "prepare": "npx jsdoc tinyJ.js -d docs -R README.md",
+    "prepare": "npx jsdoc src/tinyJ.mjs -d docs -R README.md",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
