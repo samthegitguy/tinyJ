@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "modules",
-        "dist"
+        "dist",
+        "dom"
     ]
 }

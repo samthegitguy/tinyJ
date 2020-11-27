@@ -8,6 +8,12 @@ class Element {
     html(htmlto) {
         document.getElementById(this.element).innerHTML = htmlto
     }
+    attr(elements) {
+        let x;
+        for (x in elements) {
+            document.getElementById(this.element).setAttributes(elements[x])
+        }
+    }
 }
 function $(element) {
     return new Element(element)
