@@ -13,7 +13,9 @@ In plain HTML
     $('#paragraph').html('Hello World!')
 </script>
 ```
-Using React (coming soon)
+
+If you're reading this from the npm page you might want to use 
+TinyJ for React (coming soon)
 ```jsx
 import react from 'react'
 import $ from 'tinyJ'
@@ -41,3 +43,15 @@ $.ajax("url here").then(function(res, err) {
 </script>
 ```
 See the changelog for more information.
+
+## Development
+
+Hooray! You want to help? 
+
+Here's a few guidelines:
+We have some git hooks installed, however for a cleaner experience in this dimension, we recommend you install VScode, which has the necessary extensions outlined below:-
+1. vivaxy.vscode-conventional-commits
+.
+.
+.
+
