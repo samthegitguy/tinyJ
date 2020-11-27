@@ -1,14 +1,13 @@
 {
   "name": "tinyj",
   "version": "0.1.0",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "github:samthegitguy/tinyJ"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "bugs": "https://github.com/samthegitguy/tinyJ/issues",
