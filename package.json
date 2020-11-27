@@ -6,6 +6,11 @@
     "type": "git",
     "url": "github:samthegitguy/tinyJ"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "bugs": "https://github.com/samthegitguy/tinyJ/issues",
   "homepage": "https://github.com/samthegitguy/tinyj#readme",
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
@@ -23,6 +28,9 @@
   "author": "samthegitguy",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.0",
     "jsdoc": "^3.6.6"
   }
 }
