@@ -8,7 +8,7 @@ It doesn't have all the features that Jquery has and certainly no plugins, but m
 ## Usage
 In plain HTML
 ```html
-<script src="https://unpkg.com/tinyJ/tinyJ.js"></script>
+<script src="https://unpkg.com/tinyJ/src/tinyJ.js"></script>
 <script>
     $('#paragraph').html('Hello World!')
 </script>
@@ -27,15 +27,13 @@ ReactDOM.render(
 $('#example').html('...world!')
 ```
 
-As of `0.1.0` only a small subset of CSS selectors are supported: 
-* `#idname`
-* `.classname`
-* `tagname`
+As of `0.1.1` only byId selection is available:
+* `idname`
 
 You can also use `$.ajax` very simply:
 
 ```html
-<script src="https://unpkg.com/tinyJ/tinyJ.js"> </script>
+<script src="https://unpkg.com/tinyJ/src/tinyJ.js"> </script>
 <script>
 $.ajax("url here").then(function(res, err) {
     // Do something with the response
