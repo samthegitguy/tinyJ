@@ -14,8 +14,11 @@ In plain HTML
 </script>
 ```
 
-If you're reading this from the npm page you might want to use 
+If you're reading this from the npm page you probably want to use 
 TinyJ for React (coming soon)
+```shell
+$ npm install tinyJ
+```
 ```jsx
 import react from 'react'
 import $ from 'tinyJ'

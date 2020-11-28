@@ -18,9 +18,17 @@ class _Element {
     }
     html(htmlto) {
         document.getElementById(this.element).innerHTML = htmlto
+        
     }
     /**
-     * 
+     * Adjust attributes of a element by providing a object e.g.
+     * @example
+     * attr({
+     *  onClick: "alert("Pop!")",
+     *  ...: "..."
+     * })
+     * Note that you should use the css() function rather than changing the style attributes with attr(). 
+     * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style | the MDN document documentation} ( :D ) for more info.
      * @param {Object} elements 
      */
     attr(elements) {
