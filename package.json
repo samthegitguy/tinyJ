@@ -15,9 +15,9 @@
   "homepage": "https://samthegitguy.github.io/tinyJ",
   "docs": "https://samthegitguy.github.io/tinyJ",
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
-  "main": "src/tinyJ.js",
+  "main": "bin/tinyJ.js",
   "scripts": {
-    "prepare": "npx jsdoc src/tinyJ.js -d docs -R README.md",
+    "prepare": "npx jsdoc src/tinyJ.js -d docs -R README.md && npx google-closure-compiler --js=src/tinyJ.js --js_output_file=bin/tinyJ.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "google-closure-compiler": "^20201102.0.1",
     "husky": "^4.3.0",
     "jsdoc": "^3.6.6"
   }
