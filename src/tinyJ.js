@@ -1,5 +1,16 @@
-class Element {
-    /** documentation test
+/** 
+ * Element class.
+ * 
+ * Usually hidden from the user and the user can simply call $(...).html() or $(...).css() because the $ function returns an Element object which has the functions.
+ * 
+ * Here it's named as _Element due to conflicts with an existing Element js declaration.
+ * However you should not need to worry about this for the above reasons.
+ * @author samthegitguy
+ * @access
+ */
+class _Element {
+    /** 
+     * Simple setter constructor for the Element class. 
      * 
      */
     constructor(element) {
@@ -8,6 +19,10 @@ class Element {
     html(htmlto) {
         document.getElementById(this.element).innerHTML = htmlto
     }
+    /**
+     * 
+     * @param {Object} elements 
+     */
     attr(elements) {
         let x;
         for (x in elements) {
@@ -16,7 +31,7 @@ class Element {
     }
 }
 function $(element) {
-    return new Element(element)
+    return new _Element(element)
 }
 $.ajax = function(url) {
     return new Promise((resolve, reject) => {
