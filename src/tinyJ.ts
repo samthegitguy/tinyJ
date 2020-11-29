@@ -6,9 +6,9 @@
  * Here it's named as _Element due to conflicts with an existing Element js declaration.
  * However you should not need to worry about this for the above reasons.
  * @author samthegitguy
- * @access
  */
 class _Element {
+    element: string;
     /** 
      * Simple setter constructor for the Element class. 
      * 
@@ -21,20 +21,20 @@ class _Element {
         
     }
     /**
+     *   * Note that you should use the css() function rather than changing the style attributes with attr(). For more information on why this is so, see the link below.
      * Adjust attributes of a element by providing a object e.g.
      * @example
      * attr({
      *  onClick: "alert("Pop!")",
      *  ...: "..."
      * })
-     * Note that you should use the css() function rather than changing the style attributes with attr(). 
      * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style | the MDN document documentation} ( :D ) for more info.
      * @param {Object} elements 
      */
     attr(elements) {
         let x;
         for (x in elements) {
-            document.getElementById(this.element).setAttributes(elements[x])
+            document.getElementById(this.element).setAttribute(Object.keys(elements)[x], elements[x])
         }
     }
 }

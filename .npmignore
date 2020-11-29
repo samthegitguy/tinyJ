@@ -2,3 +2,4 @@ commitlint.config.js
 docs/
 .vscode/
 src/tinyJ.js
+bin/tinyJ.js

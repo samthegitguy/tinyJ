@@ -1,0 +1,10 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "bin",
+        "lib": ["ES2016", "DOM"]
+    }
+    
+}

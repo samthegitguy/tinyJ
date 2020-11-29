@@ -8,17 +8,19 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "bugs": "https://github.com/samthegitguy/tinyJ/issues",
   "homepage": "https://samthegitguy.github.io/tinyJ",
   "docs": "https://samthegitguy.github.io/tinyJ",
   "description": "Warning - this is not built or in any way endorsed by the Jquery team. \n A short succinct version of jquery, probably not everything you'd like, but sufficient for small implementations.",
-  "main": "bin/tinyJ.js",
+  "main": "bin/tinyJ.min.js",
   "scripts": {
-    "prepare": "npx jsdoc src/tinyJ.js -d docs -R README.md && npx google-closure-compiler --js=src/tinyJ.js --js_output_file=bin/tinyJ.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npm ddp",
+    "postinstall": "node postinstall.js",
+    "prepublishOnly": "tsc && npx jsdoc bin/tinyJ.js -d docs -R README.md && google-closure-compiler --js=bin/tinyJ.js --js_output_file=bin/tinyJ.min.js && exit 0",
+    "test": "start chrome example.html"
   },
   "keywords": [
     "dom",
