@@ -19,7 +19,7 @@
   "scripts": {
     "preinstall": "npm ddp",
     "postinstall": "node postinstall.js",
-    "prepublishOnly": "tsc && npx jsdoc bin/tinyJ.js -d docs -R README.md && google-closure-compiler --js=bin/tinyJ.js --js_output_file=bin/tinyJ.min.js && exit 0",
+    "prepublishOnly": "tsc && npx jsdoc bin/tinyJ.js -d docs -R README.md && google-closure-compiler --rewrite_polyfills=false --js=bin/tinyJ.js --js_output_file=bin/tinyJ.min.js && exit 0",
     "test": "start chrome example.html"
   },
   "keywords": [

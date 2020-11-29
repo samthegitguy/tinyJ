@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "modules",
         "dist",
-        "dom"
+        "dom",
+        "size"
     ]
 }
