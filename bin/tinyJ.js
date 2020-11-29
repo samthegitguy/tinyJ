@@ -1,10 +1,10 @@
 /**
  * Element class.
  *
- * Usually hidden from the user and the user can simply call $(...).html() or $(...).css() because the $ function returns an Element object which has the functions.
+ * Usually hidden from the user and the user can simply call $(...).html() or $(...).css() because the $ function returns an anonymous _Element object.
  *
  * Here it's named as _Element due to conflicts with an existing Element js declaration.
- * However you should not need to worry about this for the above reasons.
+ * However you should not need to worry about this since it is only interacted with as an anonymous object.
  * @author samthegitguy
  */
 var _Element = /** @class */ (function () {

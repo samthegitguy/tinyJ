@@ -3,6 +3,8 @@
         "modules",
         "dist",
         "dom",
-        "size"
+        "size",
+        "npm",
+        "reusability"
     ]
 }
