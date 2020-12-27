@@ -8,16 +8,16 @@
  * @author samthegitguy
  */
 class _Element {
-    element: string;
+    element: HTMLElement;
     /** 
      * Simple setter constructor for the Element class. 
      * 
      */
     constructor(element) {
-        this.element = element
+        this.element = document.getElementById(element)
     }
     html(htmlto) {
-        document.getElementById(this.element).innerHTML = htmlto
+        this.element.innerHTML = htmlto
         
     }
     /**
@@ -34,7 +34,7 @@ class _Element {
     attr(elements) {
         let x;
         for (x in elements) {
-            document.getElementById(this.element).setAttribute(Object.keys(elements)[x], elements[x])
+            this.element.setAttribute(Object.keys(elements)[x], elements[x])
         }
     }
 }
