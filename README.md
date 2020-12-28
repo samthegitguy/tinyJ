@@ -33,16 +33,8 @@ $('#example').html('...world!')
 As of `0.1.1` only byId selection is available:
 * `idname`
 
-You can also use `$.ajax` very simply:
+You can also use `$.ajax` in the same way you would use it in Jquery. Note that many features will be missing(for obvious reasons). See the jquery documentation for more information
 
-```html
-<script src="https://unpkg.com/tinyJ/bin/tinyJ.min.js"> </script>
-<script>
-$.ajax("url here").then(function(res, err) {
-    // Do something with the response
-})
-</script>
-```
 See the changelog for more information.
 
 ## Development
