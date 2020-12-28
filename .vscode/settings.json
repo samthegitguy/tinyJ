@@ -5,6 +5,7 @@
         "dom",
         "size",
         "npm",
-        "reusability"
+        "reusability",
+        "ajax"
     ]
 }

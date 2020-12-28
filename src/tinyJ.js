@@ -8,7 +8,7 @@
  * @author samthegitguy
  */
 class _Element {
-    element: HTMLElement;
+    element;
     /** 
      * Simple setter constructor for the Element class. 
      * 
@@ -18,7 +18,7 @@ class _Element {
     }
     html(htmlto) {
         this.element.innerHTML = htmlto
-        
+
     }
     /**
      *   * Note that you should use the css() function rather than changing the style attributes with attr(). For more information on why this is so, see the link below.
@@ -38,21 +38,53 @@ class _Element {
         }
     }
 }
-function $(element) {
+let $ = function(element) {
     return new _Element(element)
 }
-$.ajax = function(url) {
-    return new Promise((resolve, reject) => {
-        let xhttp = new XMLHttpRequest()
-        xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                resolve(this.responseText)
-            } else {
-                reject(new Error("Not 200"))
-            }
-        }
-        xhttp.open("GET", url, true)
-        xhttp.send()
+/**
+ * JAX stands for Javascript and XML.
+ * It is not asynchronous.
+ * 
+ * This method does not exist in the standard JQuery library.
+ * There is only one param(url) which is the url to send the request to.
+ * 
+ * @see $.ajax
+ * @param {string} url 
+ */
+$.jax = function(url) {
+    let result;
+
+    const xhttp = new XMLHttpRequest() 
+    xhttp.open("GET", url)
+    xhttp.onload(() => {
+        result = xhttp.response
     })
+    xhttp.onerror(() => {
+        result = new Error("Network Error")
+    })
+    return result;
+
 }
-console.log("hi")
+// TODO: Confirm conformity with actual $.ajax syntax
+$.ajax = function(configObject) {
+    if (typeof(configObject.xhr) != null) var xhr = configObject.xhr
+    else var xhr = new XMLHttpRequest 
+    if (!configObject.async) $.jax(configObject.url)
+
+    xhr.open(configObject.type, configObject.url)
+    
+    xhr.onload(() => {
+        if (configObject.dataType === "script") eval(xhr.response)
+
+        configObject.success(xhr.response, xhr.status, xhr)
+    })
+    xhr.onerror(() => {
+        configObject.error(xhr, xhr.status, xhr.statusText)
+        // TODO: Change "Network Error" to actual error code
+    })
+
+    if (typeof(configObject.beforeSend) == Function) configObject.beforeSend(xhr)
+    xhr.send()
+}
+
+exports = $;
