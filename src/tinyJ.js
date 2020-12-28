@@ -8,7 +8,6 @@
  * @author samthegitguy
  */
 class _Element {
-    element;
     /** 
      * Simple setter constructor for the Element class. 
      * 
