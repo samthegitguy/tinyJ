@@ -36,6 +36,21 @@ class _Element {
             this.element.setAttribute(Object.keys(elements)[x], elements[x])
         }
     }
+    css(propertyNameOrObject) {
+        if (typeof(propertyNameOrObject === String)) eval(`return this.element.style.${propertyNameOrObject}`)
+        else {
+            if (typeof(propertyNameOrObject === Object)) {
+                const keys = Object.keys(propertyNameOrObject)
+                for (let i = 0; i < keys.length; i++) {
+                    eval(`this.element.style.${keys[i]} = ${propertyNameOrObject[keys[i]]}`)
+                }
+            } 
+        }
+    }
+    css(propertyName, propertyValue) {
+        eval(`this.element.style.${propertyName} = ${propertyValue}`)
+    }
+
 }
 let $ = function(element) {
     return new _Element(element)
